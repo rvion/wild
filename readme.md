@@ -55,3 +55,5 @@ Creating wild_wordpress_1 ... done
 Attaching to wild_db_1, wild_wordpress_1
 db_1         | 2017-12-21T14:53:00.194303Z blablabla ....
 ```
+
+![cloudflare DNS config](screenshot-cloudflare.png)
