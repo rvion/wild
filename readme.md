@@ -11,7 +11,7 @@ chmod +x *.sh
 ```
 
 ```sh
-# buying a machine with docker compose
+# buying a machine with docker machine
 ./buy-machine.sh mwild
 
 Running pre-create checks...
@@ -39,13 +39,10 @@ docker-machine ip mwild | pbcopy
 
 # ssh into mwild
 docker-machine ssh mwild
-
-# instruct docker commands to execute in remote mwild machine instead of local machine
-$(dm env mwild)
 ```
 
 ```sh
-# on local machine:
+# deploy docker-compose locally
 docker-compose up
 
 Creating wild_db_1 ...
@@ -55,5 +52,12 @@ Creating wild_wordpress_1 ... done
 Attaching to wild_db_1, wild_wordpress_1
 db_1         | 2017-12-21T14:53:00.194303Z blablabla ....
 ```
+
+```sh
+# instruct docker commands to execute in remote mwild machine instead of local machine
+$(dm env mwild)
+```
+
+### DNS config
 
 ![cloudflare DNS config](screenshot-cloudflare.png)
